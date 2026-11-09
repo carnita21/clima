@@ -9,7 +9,11 @@ const withPWA = withPWAInit({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {}, // <- Obligatorio en Next.js 16 al usar plugins con Webpack
+  turbopack: {},
+
+  // Permitir solicitudes desde la IP local
+  allowedDevOrigins: ["192.168.1.231"],
+
   images: {
     remotePatterns: [
       {
